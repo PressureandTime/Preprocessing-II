@@ -1,29 +1,61 @@
 .home {
 
+  @media @mobile {
+    display: flex;
+    flex-direction: column;
+
+
+  }
+
   .content-section {
     margin: 30px 0;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
 
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+
+    }
+
+
     .text-content {
-      width: 48%;
+      width: 40%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+        padding: @smallPadding;
+      }
+
+
     }
 
     .img-content {
-      width: 48%;
+      width: 40%;
       padding-left: 1%;
+
+      @media @mobile {
+        width: 65%;
+      }
+
 
       img {
         border-radius: 10px;
       }
     }
+
+
   }
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -45,26 +77,34 @@
     }
   }
 
-  
+
   .content-pick {
-    padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
+    padding-top: @smallPadding;
+    border: @myBorder;
     display: flex;
     justify-content: space-between;
 
-    .buttonParametric()
-
-
-
-
+    @media @mobile {
+      flex-direction: column;
+      width: 100%;
+      padding: @smallPadding;
+    }
 
 
     .destination {
-      width: 30%;
-      margin-bottom: 30px;
+      width: 45%;
+      margin: 0 auto;
+
+      .btn {
+        .buttonParametric();
+      }
     }
   }
-}// home
+}
+
+// home
+
+
 
 
 header {

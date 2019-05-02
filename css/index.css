@@ -176,11 +176,20 @@ img {
 .navigation .div2 {
   display: flex;
   align-items: center;
+  width: 50%;
+  justify-content: space-between;
+  padding: 0.5rem;
 }
 .navigation a {
-  padding: 1rem;
-  font-size: 1.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
   text-decoration: none;
+}
+@media (max-width: 500px) {
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .footer {
   width: 100%;
@@ -193,19 +202,41 @@ img {
   font-size: 1.6rem;
   padding: 20px;
 }
+@media (max-width: 500px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .home .content-section {
   margin: 30px 0;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-section {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .home .content-section .text-content {
-  width: 48%;
+  width: 40%;
   padding-right: 1%;
 }
+@media (max-width: 500px) {
+  .home .content-section .text-content {
+    width: 100%;
+    padding: 0.5rem;
+  }
+}
 .home .content-section .img-content {
-  width: 48%;
+  width: 40%;
   padding-left: 1%;
+}
+@media (max-width: 500px) {
+  .home .content-section .img-content {
+    width: 65%;
+  }
 }
 .home .content-section .img-content img {
   border-radius: 10px;
@@ -213,6 +244,12 @@ img {
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
+}
+@media (max-width: 500px) {
+  .home .inverse-content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 .home .inverse-content .text-content {
   padding-left: 1%;
@@ -230,26 +267,38 @@ img {
   border-radius: 10px;
 }
 .home .content-pick {
-  padding-top: 30px;
-  border-top: 2px dashed #C0C0C0;
+  padding-top: 0.5rem;
+  border: 0.2rem dashed black;
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-pick {
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5rem;
+  }
+}
 .home .content-pick .destination {
-  width: 30%;
-  margin-bottom: 30px;
+  width: 45%;
+  margin: 0 auto;
+}
+.home .content-pick .destination .btn {
+  border: 0.2rem dashed black;
+  border-radius: 1.5rem;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  width: 100%;
+  background-color: #17A2B8;
+  text-align: center;
+  color: #FFFFFF;
 }
 header {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 :root {
   font-size: 75%;
   font-family: 'Indie Flower', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-@media (max-width: 500px) {
-  :root {
-    font-size: 150%;
-  }
 }
