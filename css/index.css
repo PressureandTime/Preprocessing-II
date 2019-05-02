@@ -173,6 +173,10 @@ img {
   justify-content: space-evenly;
   padding: 0.5rem;
 }
+.navigation .div2 {
+  display: flex;
+  align-items: center;
+}
 .navigation a {
   padding: 1rem;
   font-size: 1.5rem;
@@ -235,11 +239,16 @@ img {
   width: 30%;
   margin-bottom: 30px;
 }
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
 :root {
   font-size: 75%;
   font-family: 'Indie Flower', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-@media (max-width: 550px) {
+@media (max-width: 500px) {
   :root {
     font-size: 150%;
   }
